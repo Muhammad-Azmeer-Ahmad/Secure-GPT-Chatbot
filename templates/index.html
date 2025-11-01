@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="main-content">
+    <h1 class="title">🚀 Secure GPT Chatbot</h1>
+    <p class="subtitle">Your AI assistant for cybersecurity and tech support.</p>
+
+    <div class="chat-container" id="chatBox">
+        <div class="chat-log" id="chatLog"></div>
+        <div class="chat-input">
+            <input type="text" id="userInput" placeholder="Type your message..." autocomplete="off">
+            <button id="sendBtn">Send</button>
+        </div>
+    </div>
+
+    <button class="chat-toggle" id="chatToggle">💬 Chat</button>
+</div>
+{% endblock %}

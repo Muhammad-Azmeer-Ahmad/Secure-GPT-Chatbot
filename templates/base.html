@@ -1,0 +1,24 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure GPT Chatbot</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+    <link rel="stylesheet" href="{% static 'starry-background.css' %}">
+</head>
+<body>
+    <div class="background">
+        <img src="{% static 'astro.jpeg' %}" alt="Astronaut" class="astronaut">
+    </div>
+
+    {% block content %}
+    {% endblock %}
+
+    <!-- JS -->
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>
