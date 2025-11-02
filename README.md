@@ -35,3 +35,110 @@ It is intended **for educational and portfolio purposes** 🧠 — demonstrating
 ```bash
 git clone [https://github.com/muhammadazmeerahmad/SecureGPTChatbot](https://github.com/muhammadazmeerahmad/SecureGPTChatbot)
 cd SecureGPTChatbot
+```
+### 2️⃣ Create a Virtual Environment
+
+```bash
+python -m venv venv
+```
+### 3️⃣ Activate it
+Windows:
+```bash
+venv\Scripts\activate
+```
+Linux:
+```bash
+source venv/bin/activate
+```
+### 4️⃣ Install dependencies 
+```bash
+pip install -r requirements.txt
+```
+### 5️⃣ Create your .env file
+Inside the root folder (next to manage.py), create a file named .env:
+```bash
+DJANGO_SECRET_KEY=your-secret-django-key
+DEBUG=True
+OPENAI_API_KEY=sk-xxxxxxx  # optional if available
+```
+### 6️⃣ Run the Server
+```bash
+python manage.py runserver
+```
+
+# Project Structure:
+``` bash
+SecureGPTChatbot/
+│
+├── manage.py
+├── requirements.txt
+├── .env                      # Environment variables file
+│
+├── secure_gpt_chatbot/       # Main Django project
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+│
+├── chatbot/                  # Chatbot Django app
+│   ├── __init__.py
+│   ├── admin.py
+│   ├── apps.py
+│   ├── migrations/
+│   ├── models.py
+│   ├── tests.py
+│   ├── urls.py
+│   ├── views.py
+│   ├── templates/
+│   │   ├── base.html
+│   │   └── index.html
+│   └── static/
+│       ├── script.js
+│       ├── styles.css
+│       ├── starry-background.css
+│       └── astro.jpeg
+│
+├── static/                   # Global static assets
+│   ├── script.js
+│   ├── styles.css
+│   ├── starry-background.css
+│   └── astro.jpeg
+│
+├── templates/                # HTML templates (global)
+│   ├── base.html
+│   └── index.html
+│
+├── utils/                    # Helper utilities
+│   ├── __init__.py
+│   └── utils.py
+│
+├── db.sqlite3
+└── venv/                     # Virtual environment (auto-generated)
+    ├── bin/
+    ├── lib/
+    ├── include/
+    └── pyvenv.cfg
+```
+## 🛠️ Technologies Used
+
+* 🐍 **Python 3.13**
+* 🌐 **Django**
+* 💬 **OpenAI GPT API** (optional)
+* 🎨 **HTML, CSS, JavaScript**
+
+## 🧠 Learning Outcomes
+
+By exploring this project, you’ll learn:
+
+* **Django app structure** and static management
+* **API endpoint creation** and routing
+* **Secure environment variable handling**
+* **Frontend-to-backend chat data flow**
+
+---
+
+## ✨ Future Improvements
+
+* Integrate real GPT responses using **OpenAI API**
+* Add encrypted chat history storage (**Fernet AES**)
+* Deploy publicly on **Render / Vercel / Railway**
