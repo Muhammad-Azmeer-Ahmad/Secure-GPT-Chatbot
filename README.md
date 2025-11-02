@@ -2,6 +2,10 @@
 
 A **secure AI-powered chatbot** built using **Django** and **OpenAI’s GPT API**, designed to demonstrate **AI integration**, **frontend-backend communication**, and **secure data handling** within a modern web environment. 💬🔐
 
+![Image Alt](<img width="626" height="268" alt="image" src="https://github.com/user-attachments/assets/8ae5ac39-2afd-47a8-93d1-6b7bf9530b90" />
+)
+
+
 ---
 
 ## ⚠️ Important Note
