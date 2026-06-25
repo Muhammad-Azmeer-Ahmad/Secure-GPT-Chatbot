@@ -1,99 +1,93 @@
-# 🤖 Secure GPT Chatbot
+# Secure GPT Chatbot
 
-A **secure AI-powered chatbot** built using **Django** and **OpenAI’s GPT API**, designed to demonstrate **AI integration**, **frontend-backend communication**, and **secure data handling** within a modern web environment. 💬🔐
+A secure AI-powered chatbot built with **Django** and the **OpenAI GPT API**, demonstrating secure credential management, modular Django architecture, and real-time frontend-backend communication.
 
-![Image Alt](https://github.com/user-attachments/assets/8ae5ac39-2afd-47a8-93d1-6b7bf9530b90)
-![Image Alt](https://github.com/user-attachments/assets/c4e21d69-b86e-49b4-8dfa-5188004148ba)
-
-
+![Chat Interface](https://github.com/user-attachments/assets/8ae5ac39-2afd-47a8-93d1-6b7bf9530b90)
+![Chatbot UI](https://github.com/user-attachments/assets/c4e21d69-b86e-49b4-8dfa-5188004148ba)
 
 ---
 
-## ⚠️ Important Note
+## Overview
 
-This project is **not connected to any live OpenAI API** at the moment.
-It is intended **for educational and portfolio purposes** 🧠 — demonstrating how to integrate a chatbot frontend with a Django backend securely.
-
-🛠️ **You can:**
-* Clone and explore the structure
-* Connect your own OpenAI API key later
-* Modify and deploy for testing or learning
-
-✅ Perfect for **students**, **junior developers**, and **cybersecurity learners** exploring **AI & Django integration**!
+Built for portfolio and educational purposes. The project shows how to wire a Django backend to an AI endpoint with proper secret management — no hardcoded keys, no committed credentials. Bring your own OpenAI key to go live; everything else works out of the box.
 
 ---
 
-## 🚀 Features
+## Features
 
-* **Frontend Chat Interface**: Clean, animated chat UI with a starry background ✨
-* **Django Backend**: Handles user messages and communicates with the AI endpoint.
-* **Secure Design**: Uses environment variables (`.env`) for keys and sensitive data 🔐
-* **Static Files Setup**: Includes CSS, JS, and media integration for easy customization.
-* **Modular App Structure**: Clearly separated `chatbot` app for better scalability.
+- Animated chat UI built in vanilla HTML/CSS/JS
+- Django backend with clean URL routing and modular app structure
+- Environment-based secret management via `.env`
+- Pluggable OpenAI layer — connect a key and it's live
 
 ---
 
-## 📦 Clone & Run Locally
+## Getting Started
 
-### 1️⃣ Clone the repository
-
+**1. Clone**
 ```bash
-git clone [https://github.com/muhammadazmeerahmad/SecureGPTChatbot](https://github.com/muhammadazmeerahmad/SecureGPTChatbot)
+git clone https://github.com/muhammadazmeerahmad/SecureGPTChatbot
 cd SecureGPTChatbot
 ```
-### 2️⃣ Create a Virtual Environment
 
+**2. Create a virtual environment**
 ```bash
 python -m venv venv
-```
-### 3️⃣ Activate it
-Windows:
-```bash
+
+# Windows
 venv\Scripts\activate
-```
-Linux:
-```bash
+
+# Linux / macOS
 source venv/bin/activate
 ```
-### 4️⃣ Install dependencies 
+
+**3. Install dependencies**
 ```bash
 pip install -r requirements.txt
 ```
-### 5️⃣ Create your .env file
-Inside the root folder (next to manage.py), create a file named .env:
-```bash
+
+**4. Create a `.env` file** in the root (next to `manage.py`)
+```env
 DJANGO_SECRET_KEY=your-secret-django-key
 DEBUG=True
-OPENAI_API_KEY=sk-xxxxxxx  # optional if available
+OPENAI_API_KEY=sk-xxxxxxx
 ```
-### 6️⃣ Run the Server
+
+**5. Run**
 ```bash
 python manage.py runserver
 ```
 
-# Project Structure:
-``` bash
+Visit `http://127.0.0.1:8000`
+
+---
+
+## Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Language | Python 3.13 |
+| Framework | Django |
+| AI | OpenAI GPT API (optional) |
+| Frontend | HTML, CSS, JavaScript |
+| Config | `.env` / environment variables |
+
+---
+
+## Project Structure
+
+```
 SecureGPTChatbot/
-│
 ├── manage.py
 ├── requirements.txt
-├── .env                      # Environment variables file
-│
-├── secure_gpt_chatbot/       # Main Django project
-│   ├── __init__.py
+├── .env
+├── secure_gpt_chatbot/
 │   ├── settings.py
 │   ├── urls.py
 │   └── wsgi.py
-│
-├── chatbot/                  # Chatbot Django app
-│   ├── __init__.py
-│   ├── admin.py
-│   ├── apps.py
-│   ├── migrations/
-│   ├── models.py
-│   ├── tests.py
-│   ├── urls.py
+├── chatbot/
 │   ├── views.py
+│   ├── urls.py
 │   ├── templates/
 │   │   ├── base.html
 │   │   └── index.html
@@ -102,48 +96,19 @@ SecureGPTChatbot/
 │       ├── styles.css
 │       ├── starry-background.css
 │       └── astro.jpeg
-│
-├── static/                   # Global static assets
-│   ├── script.js
-│   ├── styles.css
-│   ├── starry-background.css
-│   └── astro.jpeg
-│
-├── templates/                # HTML templates (global)
-│   ├── base.html
-│   └── index.html
-│
-├── utils/                    # Helper utilities
-│   ├── __init__.py
+├── utils/
 │   └── utils.py
-│
-├── db.sqlite3
-└── venv/                     # Virtual environment (auto-generated)
-    ├── bin/
-    ├── lib/
-    ├── include/
-    └── pyvenv.cfg
+└── db.sqlite3
 ```
-## 🛠️ Technologies Used
-
-* 🐍 **Python 3.13**
-* 🌐 **Django**
-* 💬 **OpenAI GPT API** (optional)
-* 🎨 **HTML, CSS, JavaScript**
-
-## 🧠 Learning Outcomes
-
-By exploring this project, you’ll learn:
-
-* **Django app structure** and static management
-* **API endpoint creation** and routing
-* **Secure environment variable handling**
-* **Frontend-to-backend chat data flow**
 
 ---
 
-## ✨ Future Improvements
+## Roadmap
 
-* Integrate real GPT responses using **OpenAI API**
-* Add encrypted chat history storage (**Fernet AES**)
-* Deploy publicly on **Render / Vercel / Railway**
+- [x] Secure environment variable configuration
+- [x] Modular Django app structure
+- [x] Animated chat UI
+- [ ] Live GPT responses via OpenAI API
+- [ ] Encrypted chat history (Fernet AES)
+- [ ] Public deployment (Render / Railway)
+- [ ] User auth + per-session conversation history
